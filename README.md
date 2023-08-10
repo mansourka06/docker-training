@@ -24,7 +24,7 @@
 2. **Build Docker Image:**
 
     ```bash
-    docker build -t my-web-app .
+    docker build -t my-web-app:v1.0.0 .
 
 3. **Run Docker Container:**
 
@@ -33,8 +33,8 @@
     docker run --name my-web-app -d -p 80:80 my-web-app:v1
 
 > **_NOTE:_**
-    - The -d flag runs the container in the background, and -p maps port 3000 inside the container to port 8080 on your host machine.
-    - v1 is the webapp tag version
+  - The -d flag runs the container in the background, and -p maps port 3000 inside the container to port 8080 on your host machine.
+  - v1.0.0 is the webapp tag version
 
 4. **Access the Application:**
 
