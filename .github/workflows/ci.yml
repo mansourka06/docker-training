@@ -1,4 +1,4 @@
-name: Test and Deploy docker webapp image
+name: Build, Test and Deploy docker webapp image
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - '*'
 
 jobs:
-  build:
+  build_and_test:
     runs-on: ubuntu-latest
 
     steps:
@@ -25,10 +25,7 @@ jobs:
       run: |
         # run the container and test its behavior
         docker run --rm --name webapp curl http://localhost:8080
-
-    - name: Log in to Docker Hub
-      run: docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
-
+        
   deploy:
     needs: build_and_test
     runs-on: ubuntu-latest
