@@ -1,6 +1,5 @@
 # syntax=docker/dockerfile:1
-
-FROM ubuntu
+FROM ubuntu:18.04
 MAINTAINER mansourka (kamansour06@gmail.com)
 RUN apt-get update
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y nginx git
