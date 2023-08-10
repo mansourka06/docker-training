@@ -37,5 +37,5 @@ jobs:
       - name: Tag and Push Docker image
         run: |
           # Tag with the created tag name and push to Docker Hub
-          docker tag my-docker-image ${{ secrets.DOCKERHUB_USERNAME }}/my-docker-image:${{ github.ref }}
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/my-docker-image:${{ github.ref }}
+          docker tag webapp ${{ secrets.DOCKERHUB_USERNAME }}/webapp:${{ github.ref }}
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/webapp:${{ github.ref }}
