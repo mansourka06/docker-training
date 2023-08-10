@@ -31,7 +31,8 @@
     Run a Docker container using the image you built:
     ```bash
     docker run -d -p 8080:3000 my-web-app
-    [note!]
+
+> **_NOTE:_**
     The -d flag runs the container in the background, and -p maps port 3000 inside the container to port 8080 on your host machine.
 
 4. **Access the Application:**
