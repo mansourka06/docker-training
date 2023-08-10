@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 FROM ubuntu:18.04
-MAINTAINER mansourka (kamansour06@gmail.com)
+MAINTAINER mansourka (mailmansour@gmx.fr)
 RUN apt-get update
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y nginx git
 EXPOSE 80
