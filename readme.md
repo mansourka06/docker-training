@@ -86,7 +86,7 @@ Before starting the training, ensure that you have the following prerequisites i
  docker-compose up -d
  ```
 
-3. Access the Application
+- **Access the Application**
 
  Open a web browser and navigate to http://localhost:8080 to access your web application
 
