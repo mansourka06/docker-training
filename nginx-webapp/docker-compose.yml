@@ -1,0 +1,16 @@
+---
+# docker-compose.yml
+# run with the command: docker-compose up -d
+
+version: '3'
+
+services:
+  my-nginx-webapp:
+    build: .
+    image: my-nginx-webapp
+    ports:
+      - "8081:80"
+    container_name: my-nginx-webapp
+    command: ["nginx", "-g", "daemon off;"]
+
+...
