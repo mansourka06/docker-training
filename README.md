@@ -34,7 +34,7 @@ Before starting the training, ensure that you have the following prerequisites i
  ```bash
  vi Dockerfile
  ```
- - add the images configurations (for exemple the following content)
+ add the following content
  ```bash
  FROM ubuntu 
  RUN apt update && apt upgrade -y
