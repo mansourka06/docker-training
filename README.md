@@ -57,11 +57,12 @@ Before starting the training, ensure that you have the following prerequisites i
 
 ## Running the docker image
 
- **with docker command**
+- **with docker command**
  ```bash
  docker run -d -p 8080:80 docker-container-id --name my-nginx-webapp
  ```
- **with docker-compose file**
+
+- **with docker-compose file**
  1. - Create the docker-compose file and add the following content:
  ```bash
  vi docker-compose.yml
