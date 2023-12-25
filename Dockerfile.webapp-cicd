@@ -1,0 +1,16 @@
+# syntax=docker/dockerfile:1
+FROM ubuntu
+MAINTAINER mansourk(mailmansour@gmx.fr)
+RUN apt update && apt upgrade -y
+# Preventing the timezone selection bug
+RUN DEBIAN_FRONTEND="noninteractive" apt-get -y install tzdata 
+# Installing the required packages for the project, namely git and the nginx web service
+RUN apt-get install -y -q git nginx
+EXPOSE 80
+RUN rm -Rf /var/www/html/*
+# Cloning my Git repository with the mini project
+RUN git clone https://github.com/mansourka06/my-simple-devops-webapp.git
+# Copying the files from the mini web project to the root of my web server
+RUN cd my-simple-devops-webapp && cp -r * /var/www/html/
+ENTRYPOINT ["/usr/sbin/nginx", "-g", "daemon off;"]
+
