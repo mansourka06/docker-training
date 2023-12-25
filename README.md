@@ -45,7 +45,7 @@ Before starting the training, ensure that you have the following prerequisites i
  RUN cd my-simple-devops-webapp && cp -r * /var/www/html/
  ```
 
-2. - ***Bulding the docker images**
+2. - **Bulding the docker images**
  ```bash
  docker build -t container_name .
  ```
