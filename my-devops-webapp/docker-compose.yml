@@ -1,0 +1,16 @@
+---
+# docker-compose.yml
+# run with the command: docker-compose up -d
+
+version: '3'
+
+services:
+  my-devops-webapp:
+    build: .
+    image: my-devops-webapp
+    ports:
+      - "8081:80"
+    container_name: my-devops-webapp
+    command: ["apache2", "-g", "daemon off;"]
+
+...
