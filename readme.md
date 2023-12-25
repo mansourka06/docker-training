@@ -98,13 +98,13 @@ Update the Dockerfile and application code to suit your specific needs.
 Use environment variables and Docker Compose to manage configuration.
 Consider using Docker Compose for multi-container applications and defining services.
 
-### Build docker image with tag (version)
+- **Build docker image with tag (version)**
 
     ```bash
     docker build -t my-web-app:v1.0.0 .
     ```
 
-### Rununing docker container with tag (version)
+- **Rununing docker container with tag (version)**
 
     Run a Docker container using the image you built:
     ```bash
