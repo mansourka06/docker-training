@@ -12,8 +12,8 @@ Before starting the training, ensure that you have the following prerequisites i
 
 - Ensure that Docker is installed on your system. If not, you can download and install it from the official Docker website: [Docker Installation Guide](https://docs.docker.com/get-docker/)
 - [Docker](https://docs.docker.com/get-docker/)
-- [Docker Compose](https://docs.docker.com/compose/install/) (if applicable)
-- 
+- [Docker Compose](https://docs.docker.com/compose/install/)
+  
 ## Getting Started
 
 1. **Clone the Repository:**
