@@ -102,13 +102,14 @@ Consider using Docker Compose for multi-container applications and defining serv
 
     ```bash
     docker build -t my-web-app:v1.0.0 .
+    ```
 
 ### Rununing docker container with tag (version)
 
     Run a Docker container using the image you built:
     ```bash
     docker run --name my-web-app -d -p 80:80 my-web-app:v1.0.0
-    
+    ```
 > **_NOTE:_**
   - The -d flag runs the container in the background, and -p maps port 3000 inside the container to port 8080 on your host machine.
   - v1.0.0 is the webapp tag version
@@ -117,15 +118,18 @@ Consider using Docker Compose for multi-container applications and defining serv
 
   - To stop the running container, use:
     ```bash
-    docker stop <container_id or container_name>:
+    docker stop <container_id or container_name>:tag_name
+    ```
 
  - To remove the container, use:
     ```bash
     docker rm <container_id or container_name>
+    ```
 
  - To remove the Docker image, use:
     ```bash
     docker rmi docker_image_name
+    ```
 
 ## Troubleshooting
 
@@ -134,6 +138,7 @@ Consider using Docker Compose for multi-container applications and defining serv
  - Check Docker logs for any errors or issues:
     ```bash
     docker logs <container_id or container_name>
+    ```
 
 ## Author
 - [Mansour KA](https://github.com/mansourka06)
