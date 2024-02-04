@@ -19,12 +19,12 @@ jobs:
         dockerfile: Dockerfile
 
     - name: Build Docker image
-      run: docker build -t webapp .
+      run: docker build -t my-devops-webapp .
 
     - name: Run test
       run: |
         # run the container and test its behavior
-        docker run --rm --name webapp curl http://localhost:8080
+        docker run --rm --name my-devops-webapp curl http://localhost:8080
         
   deploy:
     needs: build_and_test
@@ -37,5 +37,5 @@ jobs:
       - name: Tag and Push Docker image
         run: |
           # Tag with the created tag name and push to Docker Hub
-          docker tag webapp ${{ secrets.DOCKERHUB_USERNAME }}/webapp:${{ github.ref }}
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/webapp:${{ github.ref }}
+          docker tag my-devops-webapp ${{ secrets.DOCKERHUB_USERNAME }}/my-devops-webapp:${{ github.ref }}
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/my-devops-webapp:${{ github.ref }}
